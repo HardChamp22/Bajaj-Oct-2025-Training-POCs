@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creathink Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <!-- Hidden checkbox for menu state -->
+    <input type="checkbox" id="menu-toggle" />
+
+    <header>
+      <!-- Left Section: Hamburger, Logo, Search Bar -->
+      <div class="header-left">
+        <!-- Hamburger Menu (always visible) -->
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-brain"></i></div>
+          <span>CREATHINK</span>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="search" placeholder="Search" />
+        </div>
+      </div>
+
+      <!-- Right Section: Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn"><i class="fas fa-bell"></i></button>
+        <button class="icon-btn"><i class="fas fa-plus"></i></button>
+        <div class="user-profile">
+          <div>
+            <img src="images/avatar.png" alt="profile" class="user-avatar" />
+          </div>
+          <span>Hardik Negi</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar">
+        <div class="nav-section">
+          <!-- Dashboard with submenu -->
+          <div class="nav-item active">
+            <input type="checkbox" id="dashboard-toggle" checked />
+            <label for="dashboard-toggle" class="nav-item-label">
+              <div class="nav-item-content">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="nav-submenu">
+              <div class="nav-submenu-item active">My HomePage</div>
+              <div class="nav-submenu-item">To-Do-List</div>
+              <div class="nav-submenu-item">Sales Analytics</div>
+              <div class="nav-submenu-item">Call Center Date</div>
+              <div class="nav-submenu-item">Product requirement</div>
+            </div>
+          </div>
+
+          <!-- Accounts without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-users"></i>
+              <span>Accounts</span>
+            </div>
+          </div>
+
+          <!-- Contacts without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-address-book"></i>
+              <span>Contacts</span>
+            </div>
+          </div>
+
+          <!-- Team Design without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-user-group"></i>
+              <span>Team Design</span>
+            </div>
+          </div>
+
+          <!-- Mails with submenu -->
+          <div class="nav-item">
+            <input type="checkbox" id="mails-toggle" />
+            <label for="mails-toggle" class="nav-item-label">
+              <div class="nav-item-content">
+                <i class="fas fa-envelope"></i>
+                <span>Mails</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="nav-submenu">
+              <div class="nav-submenu-item">Inbox</div>
+              <div class="nav-submenu-item">Archieves</div>
+              <div class="nav-submenu-item">Sent</div>
+            </div>
+          </div>
+
+          <!-- Calendar with submenu -->
+          <div class="nav-item">
+            <input type="checkbox" id="calendar-toggle" />
+            <label for="calendar-toggle" class="nav-item-label">
+              <div class="nav-item-content">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="nav-submenu">
+              <div class="nav-submenu-item">Work</div>
+              <div class="nav-submenu-item">To-do list</div>
+              <div class="nav-submenu-item">Goals</div>
+            </div>
+          </div>
+
+          <!-- Cases without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-briefcase"></i>
+              <span>Cases</span>
+            </div>
+          </div>
+
+          <!-- Activities with submenu -->
+          <div class="nav-item">
+            <input type="checkbox" id="activities-toggle" />
+            <label for="activities-toggle" class="nav-item-label">
+              <div class="nav-item-content">
+                <i class="fas fa-chart-bar"></i>
+                <span>Activities</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="nav-submenu">
+              <div class="nav-submenu-item">Good</div>
+              <div class="nav-submenu-item">Better</div>
+              <div class="nav-submenu-item">Best</div>
+            </div>
+          </div>
+
+          <!-- Documents without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-file"></i>
+              <span>Documents</span>
+            </div>
+          </div>
+
+          <!-- Support without submenu -->
+          <div class="nav-item">
+            <div class="nav-item-content">
+              <i class="fas fa-question-circle"></i>
+              <span>Support</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main>
+        <section class="dashboard-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon blue">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="stat-content">
+              <h3>Total Customers</h3>
+              <div class="stat-value">10,500</div>
+              <div class="stat-trend trend-up">
+                <i class="fas fa-arrow-trend-up"></i>
+                <span>17%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stat-card highlight">
+            <div class="stat-header">
+              <div class="stat-icon">
+                <i class="fas fa-user-group"></i>
+              </div>
+            </div>
+            <div class="stat-content">
+              <h3>Team Design</h3>
+              <div class="stat-value">25</div>
+              <div class="stat-trend trend-up">
+                <i class="fas fa-arrow-trend-up"></i>
+                <span>20%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon orange">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+            </div>
+            <div class="stat-content">
+              <h3>Total Order</h3>
+              <div class="stat-value">1,300</div>
+              <div class="stat-trend trend-down">
+                <i class="fas fa-arrow-trend-down"></i>
+                <span>17%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon cyan">
+                <i class="fas fa-credit-card"></i>
+              </div>
+            </div>
+            <div class="stat-content">
+              <h3>Total Income</h3>
+              <div class="stat-value">100,585</div>
+              <div class="stat-trend trend-up">
+                <i class="fas fa-arrow-trend-up"></i>
+                <span>35%</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="chart-grid">
+          <article class="chart-card">
+            <div class="chart-header">
+              <h2 class="chart-title">Monthly Income</h2>
+            </div>
+            <div>
+              <img
+                src="images/figma-chart-1.jpg"
+                alt="chart1"
+                class="chart-placeholder"
+              />
+              <span>Monthly Income Chart</span>
+            </div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <h2 class="chart-title">Design Activity</h2>
+            </div>
+            <div>
+              <img
+                src="images/figma-chart-2.jpg"
+                alt="chart1"
+                class="chart-placeholder"
+              />
+              <span>Design Activity Chart</span>
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <span class="legend-dot blue"></span>
+                <span>Mobile</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot orange"></span>
+                <span>Website</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot yellow"></span>
+                <span>Illustration</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="bottom-charts">
+          <article class="chart-card">
+            <div class="chart-header">
+              <h2 class="chart-title">Customers Order</h2>
+            </div>
+            <div class="chart-legend" style="margin-bottom: 1rem">
+              <div class="legend-item">
+                <span class="legend-dot blue"></span>
+                <span>Website</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot light-blue"></span>
+                <span>Mobile Apps</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot purple"></span>
+                <span>Customer to Customer</span>
+              </div>
+            </div>
+            <div>
+              <img
+                src="images/figma-chart-3.jpg"
+                alt="chart1"
+                class="chart-placeholder"
+              />
+              <span>Customers Order Chart</span>
+            </div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <h2 class="chart-title">Total Earning from Design</h2>
+            </div>
+            <div
+              style="
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 1rem;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+              "
+            >
+              <div>UI/UX Design Mobile: <strong>$700K</strong></div>
+              <div>UI/UX Design Website: <strong>$75K</strong></div>
+              <div>Design Logo: <strong>$50K</strong></div>
+              <div>Design Illustration: <strong>$25K</strong></div>
+            </div>
+            <div>
+              <img
+                src="images/figma-chart4.jpg  "
+                alt="chart1"
+                class="chart-placeholder"
+              />
+              <span>Total Earning Chart</span>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
